@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/activity.css">
+    <title>Activity Tracker</title>
+</head>
+
+<body>
+    <h1>Activity Tracker</h1>
+    <form class="form-activity">
+        <div class="form-activity">
+            <label for="activity-search">Search for your activity: </label>
+            <input list="activity-list" name="activity-search" id="activity-search" required>
+            <datalist id="activity-list">
+                <option value="Sleeping">
+                <option value="Wash dishes">
+                <option value="Shower">
+                <option value="Vacuum cleaning">
+                <option value="Reading">
+                <option value="OTHER - not listed">
+            </datalist>
+        </div>
+        <div class="form-activity">
+            <label for="time-spent">Enter time spent: </label>
+            <input type="time" name="time-spent" id="time-spent" required>
+            <small>(hrs:mins)</small>
+        </div>
+        <div class="form-activity">
+            <button id="add-activity" type="submit">Add Activity</button>
+        </div>
+    </form>
+    <h4>List of tracked activities:</h4>
+    <ul id="tracked-activities"></ul>
+    <p id="totals"></p>
+    <!-- pie chart -->
+    <canvas id="myCanvas"></canvas>
+    <div id="myLegend"></div>
+    <script src="js/activity.js"></script>
+</body>
+
+</html>
